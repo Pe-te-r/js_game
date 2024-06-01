@@ -17,6 +17,7 @@ body {
 main{
     width: 80%;
     max-height: fit-content;
+    height: 60%;
 }
 .results .info{
     border: 1px solid whitesmoke;
@@ -49,7 +50,19 @@ main{
 }
 .results .gameContainer{
     display: flex;
-    justify-content:space-around~; 
+    justify-content:space-around; 
     align-items: center;
-    border: 3px solid green;
+}
+
+.results .gameContainer .imageDiv{
+    /* width: 100px; */
+    /* height: x; */
+    border: 8px solid rgba(0, 0, 255, 0.819);
+    cursor: pointer;
+    background-color: antiquewhite;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
 }
