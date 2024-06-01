@@ -52,6 +52,7 @@ main{
     display: flex;
     justify-content:space-around; 
     align-items: center;
+    margin-top: 50px;
 }
 
 .results .gameContainer .imageDiv{
@@ -65,4 +66,14 @@ main{
     align-items: center;
     justify-content: center;
     border-radius: 50%;
+}
+.button{
+    color: white;
+    border: none;
+    padding:  20px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(15, 13, 13, 0.877);
+    border-radius: 12px;
+    cursor: pointer;
 }
