@@ -3,3 +3,53 @@
     margin: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: rgb(54, 54, 54);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+main{
+    width: 80%;
+    max-height: fit-content;
+}
+.results .info{
+    border: 1px solid whitesmoke;
+    margin-bottom: 30px;
+    color: aliceblue;
+    padding: 10px;
+    box-shadow: 3px 3px 5px black;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.results .info .marks{
+    /* margin-top: 30px; */
+    padding: 10px 19px;
+    background-color: bisque;
+   color: rgba(0, 0, 0, 0.882);
+   font-size: 19px; 
+   border-radius:12px;
+}
+.results .info .marks p{
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.results .info .marks p span {
+    margin: 10px 0px;
+}
+.results .gameContainer{
+    display: flex;
+    justify-content:space-around~; 
+    align-items: center;
+    border: 3px solid green;
+}
