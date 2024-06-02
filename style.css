@@ -77,3 +77,46 @@ main{
     border-radius: 12px;
     cursor: pointer;
 }
+.movesContainer{
+    /* width: 80%; */
+    margin-top: 50px;
+    /* border: 3px solid black; */
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 3px 3px 15px black;
+}
+.movesContainer .moves{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-around;
+    /* width: 100%; */
+    /* padding: 10px; */
+    border-radius: 12px;
+}
+.movesContainer .moves .move{
+    /* width: 100px; */
+    /* height: 100px; */
+    /* border: 3px solid black; */
+    border-radius: 50%;
+    /* background-color: rgba(0, 0, 0, 0.882); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.movesContainer .moves .move p{
+    font-size: 26px;
+    font-weight: 600;
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    color: azure;
+}
+.movesContainer .moves .move img{
+    border: 10px solid rgb(15, 135, 111);
+    border-radius: 50%;
+    padding: 24px;
+    background-color: antiquewhite;
+}

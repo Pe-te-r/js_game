@@ -4,6 +4,7 @@ const url={"paper":"./images/icon-paper.svg","rock":"./images/icon-rock.svg","sc
 // const player_choice
 // const computer_choice=computerPlay()
 const results=document.querySelector("#results")
+const movesContainer=document.querySelector('.movesContainer')
 results.innerText=score
 
 // const defaultCloneDisplay=document.querySelector(".thisone").cloneNode(true)
@@ -18,6 +19,29 @@ const computerPlay=()=>{
     }else{
         return'scissors'
     }
+}
+
+const eachMoveDisplay=(moveBy,itemSelected)=>{
+    let move =document.createElement('div')
+    move.classList.add('move')
+    let image=document.createElement('img')
+    image.src=url[itemSelected]
+    let p=document.createElement('p')
+    p.innerText =moveBy
+    move.appendChild(image)
+    move.appendChild(p)
+    return move
+}
+
+const showMoves=(player_move,computer_move)=>{
+    movesContainer.style.display="block"
+    const moves=document.querySelector('.moves')
+    moves.innerHTML=''
+    const playerMove=eachMoveDisplay('You',player_move)
+    moves.appendChild(playerMove)
+    const computer_choice=eachMoveDisplay('Computer',computer_move)
+    moves.appendChild(computer_choice)
+    movesContainer.appendChild(moves)
 }
 
 const showResults = (imageName)=>{
@@ -39,6 +63,7 @@ const showResults = (imageName)=>{
 
 const reset =()=>{
     display.innerHTML=''
+    movesContainer.style.display="none"
     showResults('paper')
     showResults('rock')
     showResults('scissors')
@@ -63,7 +88,8 @@ const mainFunc=()=>{
             button.classList.add('button')
             button.innerText='Play Again'
             display.appendChild(button)
-            
+            showMoves(player_choice, computer_choice)
+
             button.addEventListener('click',()=>{
                 reset()
             })
